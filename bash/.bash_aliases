@@ -1,0 +1,27 @@
+alias nova='ssh -lsimark nova.polymtl.ca -X -A'
+alias novaroot='ssh -lroot nova.polymtl.ca -X'
+alias orion='ssh -lsimon orion.aep.polymtl.ca -X -A'
+alias orionroot='ssh -lroot orion.aep.polymtl.ca -X'
+alias stationx='ssh -lsimark stationx.dorsal.polymtl.ca -X -A'
+alias gigl='ssh -l simark l4712-01.info.polymtl.ca -X'
+alias maison='ssh -l markys markys2.ath.cx -X'
+alias biciklo='ssh -l biciklo nova.polymtl.ca -X'
+alias pi='ssh -lsimark pi.thetu.bz'
+
+alias hr='for i in $(seq 1 $(tput cols)); do echo -n "="; done && echo'
+alias less='less -R'
+alias restorescreen='screen -raAd'
+alias listscreen='screen -list'
+
+alias vi='vim -p'
+alias grep='grep --color'
+alias g='grep -riIn'
+alias s='sublime'
+alias t='tar -xvf'
+
+alias ls='ls --color'
+alias l='ls -l'
+alias la='ls -la'
+
+alias od='od -Ax'
+alias upnup='sudo aptitude update && sudo aptitude upgrade'
