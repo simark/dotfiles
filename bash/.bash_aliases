@@ -4,7 +4,7 @@ alias orion='ssh -lsimon orion.aep.polymtl.ca -X -A'
 alias orionroot='ssh -lroot orion.aep.polymtl.ca -X'
 alias stationx='ssh -lsimark stationx.dorsal.polymtl.ca -X -A'
 alias gigl='ssh -l simark l4712-01.info.polymtl.ca -X'
-alias maison='ssh -l markys markys2.ath.cx -X'
+alias maison='ssh -l simark markys2.ath.cx -X -A'
 alias biciklo='ssh -l biciklo nova.polymtl.ca -X'
 alias pi='ssh -lsimark pi.thetu.bz'
 
