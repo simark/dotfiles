@@ -10,7 +10,12 @@ fi
 
 # Loader le bash completion si présent
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    source /etc/bash_completion
+	source /etc/bash_completion
+fi
+
+# Loader le fichier de configuration locale
+if [ -f ~/.bashrc.local ]; then
+	source ~/.bashrc.local
 fi
 
 # Pheww... 
@@ -89,9 +94,18 @@ _make_ps1()
 	_c_done
 }
 
+PROMPT_COMMAND='export LAST_COMMAND_RESULT=$?'
+PS1='$(_make_ps1)'
 
 export LANG='en_CA.UTF-8'
-PROMPT_COMMAND='export LAST_COMMAND_RESULT=$?'
 
-PS1='$(_make_ps1)'
+export EDITOR='vim'
+export DEBEMAIL='simon.marchi@polymtl.ca'
+export DEBFULLNAME='Simon Marchi'
+
+HISTFILESIZE=1000000000
+HISTSIZE=1000000
+
+$(dircolors)
+
 
