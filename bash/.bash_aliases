@@ -1,4 +1,4 @@
-alias nova='ssh -lsimark nova.polymtl.ca -X -A'
+alias nova='ssh -lsimark nova.polymtl.ca -X -A -D8080'
 alias novaroot='ssh -lroot nova.polymtl.ca -X'
 alias orion='ssh -lsimon orion.aep.polymtl.ca -X -A'
 alias orionroot='ssh -lroot orion.aep.polymtl.ca -X'
@@ -13,6 +13,7 @@ alias less='less -R'
 alias restorescreen='screen -raAd'
 alias listscreen='screen -list'
 
+alias gdb='gdb -q'
 alias vi='vim -p'
 alias grep='grep --color'
 alias g='grep -riIn'
