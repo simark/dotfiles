@@ -106,6 +106,5 @@ export DEBFULLNAME='Simon Marchi'
 HISTFILESIZE=1000000000
 HISTSIZE=1000000
 
-$(dircolors)
-
+eval $(dircolors)
 
