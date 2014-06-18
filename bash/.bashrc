@@ -94,7 +94,7 @@ _make_ps1()
 	_c_done
 }
 
-PROMPT_COMMAND='export LAST_COMMAND_RESULT=$?'
+PROMPT_COMMAND='LAST_COMMAND_RESULT=$?'
 PS1='$(_make_ps1)'
 
 export LANG='en_CA.UTF-8'
