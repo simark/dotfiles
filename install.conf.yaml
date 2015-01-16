@@ -3,4 +3,5 @@
         ~/.vimrc: vimrc
         ~/.oh-my-zsh: oh-my-zsh
         ~/.zshrc: zshrc
+        ~/.zshrc.aliases: zshrc.aliases
 - shell: []

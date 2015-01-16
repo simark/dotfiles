@@ -79,3 +79,7 @@ export EDITOR='vim'
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
+
+if [ -f ~/.zshrc.aliases ]; then
+    source ~/.zshrc.aliases
+fi

@@ -1,0 +1,27 @@
+# Hosts
+alias nova='ssh -lsimark nova.polymtl.ca -Y -A -D8080'
+alias novaroot='ssh -lroot nova.polymtl.ca -Y'
+alias orion='ssh -lsimon orion.aep.polymtl.ca -Y -A'
+alias orionroot='ssh -lroot orion.aep.polymtl.ca -Y'
+alias gigl='ssh -l simark l4712-01.info.polymtl.ca -Y'
+alias maison='ssh -l simark s.thetu.bz -Y -A'
+alias biciklo='ssh -l biciklo nova.polymtl.ca -Y'
+
+# Display an horizontal line
+alias hr='for i in $(seq 1 $(tput cols)); do echo -n "="; done && echo'
+
+# Make colors work better with less
+alias less='less -R'
+
+# Make gdb start less verbose
+alias gdb='gdb -q'
+
+# Make vim open a tab for all specified files
+alias vim='vim -p'
+alias vi='vim'
+
+# Make od use hex radix
+alias od='od -Ax'
+
+# Upgrade all the things
+alias upnup='sudo aptitude update && sudo aptitude upgrade'
