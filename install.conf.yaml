@@ -1,4 +1,4 @@
-- clean: []
+- clean: ['~']
 - link:
         ~/.vimrc: vimrc
         ~/.oh-my-zsh: oh-my-zsh
