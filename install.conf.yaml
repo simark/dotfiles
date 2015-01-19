@@ -5,4 +5,6 @@
         ~/.zshrc: zshrc
         ~/.zshrc.aliases: zshrc.aliases
         ~/.oh-my-zsh/custom/crunch.zsh-theme: oh-my-zsh-custom/crunch.zsh-theme
-- shell: []
+- shell: [
+        ["dconf write /org/gnome/shell/overrides/attach-modal-dialogs false", "Disable attaching gnome modal dialogs"],
+]
