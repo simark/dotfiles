@@ -83,3 +83,6 @@ fi
 if [ -f ~/.zshrc.aliases ]; then
     source ~/.zshrc.aliases
 fi
+
+# Do not share history between terminals
+unsetopt share_history
