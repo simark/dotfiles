@@ -5,6 +5,6 @@
         ~/.zshrc: zshrc
         ~/.zshrc.aliases: zshrc.aliases
         ~/.oh-my-zsh/custom/crunch.zsh-theme: oh-my-zsh-custom/crunch.zsh-theme
-- shell: [
-        ["dconf write /org/gnome/shell/overrides/attach-modal-dialogs false", "Disable attaching gnome modal dialogs"],
-]
+- shell:
+        - ["dconf write /org/gnome/shell/overrides/attach-modal-dialogs false", "Disable attaching gnome modal dialogs"]
+        - ["curl -o ~/bin/sss https://raw.githubusercontent.com/simark/sss/master/sss && chmod +x ~/bin/sss", "Installing sss"]
