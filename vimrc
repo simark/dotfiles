@@ -6,6 +6,15 @@ set hlsearch
 " Incremental search
 set incsearch
 
+" Show line numbers
+set number
+
+" Indentation
+set autoindent
+set noexpandtab
+set tabstop=8
+set softtabstop=8
+
 " Enable mouse !
 set mouse=a
 
