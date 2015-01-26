@@ -45,7 +45,12 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux)
+plugins=(git)
+if lsb_release -i | grep Ubuntu &> /dev/null; then
+	plugins+=(command-not-found)
+elif lsb_release -i | grep Arch &> /dev/null; then
+	plugins+=(archlinux)
+fi
 
 # User configuration
 
