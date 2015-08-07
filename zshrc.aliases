@@ -6,6 +6,7 @@ alias orionroot='ssh -lroot orion.aep.polymtl.ca -Y'
 alias gigl='ssh -l simark l4712-01.info.polymtl.ca -Y'
 alias maison='ssh -l simark s.thetu.bz -Y -A'
 alias biciklo='ssh -l biciklo nova.polymtl.ca -Y'
+alias grid='ssh -l root i.gridshowsystems.com'
 
 # Display an horizontal line
 alias hr='for i in $(seq 1 $(tput cols)); do echo -n "="; done && echo'
