@@ -26,3 +26,5 @@ alias od='od -Ax'
 
 # Upgrade all the things
 alias upnup='sudo aptitude update && sudo aptitude upgrade'
+
+alias readelf="readelf -W"
