@@ -91,3 +91,8 @@ fi
 
 # Do not share history between terminals
 unsetopt share_history
+
+export QUILT_PATCHES=debian/patches
+export QUILT_REFRESH_ARGS="-p ab --no-timestamps --no-index"
+export DEBEMAIL='simon.marchi@polymtl.ca'
+export DEBFULLNAME='Simon Marchi'
