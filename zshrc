@@ -47,7 +47,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker)
 if lsb_release -i | grep Ubuntu &> /dev/null; then
-	plugins+=(command-not-found)
+	plugins+=(command-not-found debian)
 elif lsb_release -i | grep Arch &> /dev/null; then
 	plugins+=(archlinux)
 fi
@@ -96,3 +96,6 @@ export QUILT_PATCHES=debian/patches
 export QUILT_REFRESH_ARGS="-p ab --no-timestamps --no-index"
 export DEBEMAIL='simon.marchi@polymtl.ca'
 export DEBFULLNAME='Simon Marchi'
+
+# Override "debian" plugin (ag is apt-get upgrade)
+unalias ag
