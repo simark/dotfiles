@@ -1,6 +1,7 @@
 - clean: ['~']
 - link:
         ~/.vimrc: vimrc
+        ~/.vim/bundle/Vundle.vim: Vundle.vim
         ~/.oh-my-zsh: oh-my-zsh
         ~/.zshrc: zshrc
         ~/.zshrc.aliases: zshrc.aliases
