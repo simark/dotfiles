@@ -1,10 +1,23 @@
-" Enable syntax highlight
-syntax on
+" Disable vi compatibility mode (shouldn't be needed in a .vimrc, but would be
+" needed is this file is used with vim -u).
+set nocompatible
 
-" Highlight current search
-set hlsearch
-" Incremental search
-set incsearch
+" Disable filetype temporarily (needed by Vundle), it is re-enabled later.
+filetype off
+
+" Vundle initialization
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()
+
+" Search settings
+set hlsearch " highlight
+set incsearch " incremental
+set ignorecase " ignore case...
+set smartcase " unless there is a capital letter in the search term
 
 " Show line numbers
 set number
@@ -25,6 +38,9 @@ set backspace=indent,eol,start
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
+" Enable syntax highlight
+syntax on
+
 " Status line
 set laststatus=2
 set statusline=%<%f\ " Filename
@@ -36,5 +52,3 @@ set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
 " Highlight trailing spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-
-
