@@ -13,3 +13,4 @@
         - ["curl -o ~/bin/sss https://raw.githubusercontent.com/simark/sss/master/sss && chmod +x ~/bin/sss", "Installing sss"]
         - ["curl -o ~/bin/tig-rebase.sh https://raw.githubusercontent.com/Nattfarinn/tig-rebase/master/tig-rebase.sh && chmod +x ~/bin/tig-rebase.sh", "Installing tig-rebase.sh"]
         - ["curl -o ~/bin/mklog https://raw.githubusercontent.com/gcc-mirror/gcc/master/contrib/mklog && chmod +x ~/bin/mklog", "Installing mklog"]
+        - ["vim +PluginInstall +qall", "Installing Vim plugins"]
