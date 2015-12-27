@@ -52,6 +52,12 @@ elif lsb_release -i | grep Arch &> /dev/null; then
 	plugins+=(archlinux)
 fi
 
+# Enable command-not-found
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
+# Override "debian" plugin (ag is apt-get upgrade)
+unalias ag
+
 # User configuration
 
 export PATH=$HOME/bin:$PATH
@@ -96,6 +102,3 @@ export QUILT_PATCHES=debian/patches
 export QUILT_REFRESH_ARGS="-p ab --no-timestamps --no-index"
 export DEBEMAIL='simon.marchi@polymtl.ca'
 export DEBFULLNAME='Simon Marchi'
-
-# Override "debian" plugin (ag is apt-get upgrade)
-unalias ag
