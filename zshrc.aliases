@@ -26,5 +26,6 @@ alias od='od -Ax'
 
 # Upgrade all the things
 alias upnup='sudo aptitude update && sudo aptitude upgrade'
+alias pkg-update='sudo etckeeper pre-install && sudo pacman -Syu && sudo etckeeper post-install'
 
 alias readelf="readelf -W"
