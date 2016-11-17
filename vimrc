@@ -52,3 +52,7 @@ set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
 " Highlight trailing spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+
+" How to complete when pressing tab in "command" mode
+set wildmode=longest,list,full
+set wildmenu
