@@ -102,3 +102,32 @@ export QUILT_PATCHES=debian/patches
 export QUILT_REFRESH_ARGS="-p ab --no-timestamps --no-index"
 export DEBEMAIL='simon.marchi@polymtl.ca'
 export DEBFULLNAME='Simon Marchi'
+
+# Override "debian" plugin (ag is apt-get upgrade)
+unalias ag
+
+# Activate autojump
+. /usr/share/autojump/autojump.zsh
+
+function gdb-conf {
+  if [ "$#" -lt 1 ]; then
+	  echo "Usage: gdb-conf configure-path [additional args...]"
+	  return
+  fi
+
+  conf=$1
+  shift 1
+
+  $conf \
+    --disable-binutils \
+    --disable-gold \
+    --disable-ld \
+    --disable-gprof \
+    --disable-gas \
+    --enable-targets="all" \
+    CFLAGS="-g3 -O0" \
+    CXXFLAGS="-g3 -O0" \
+    CC="ccache gcc" \
+    CXX="ccache g++" \
+    $*
+}
