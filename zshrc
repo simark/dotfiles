@@ -103,9 +103,6 @@ export QUILT_REFRESH_ARGS="-p ab --no-timestamps --no-index"
 export DEBEMAIL='simon.marchi@polymtl.ca'
 export DEBFULLNAME='Simon Marchi'
 
-# Override "debian" plugin (ag is apt-get upgrade)
-unalias ag
-
 # Activate autojump
 . /usr/share/autojump/autojump.zsh
 
