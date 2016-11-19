@@ -56,7 +56,10 @@ fi
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # Override "debian" plugin (ag is apt-get upgrade)
-unalias ag
+type ag | grep alias &> /dev/null
+if [ "$?" -eq "0" ]; then
+	unalias ag
+fi
 
 # User configuration
 
