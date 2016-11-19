@@ -10,6 +10,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 
