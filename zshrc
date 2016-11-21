@@ -52,18 +52,19 @@ elif lsb_release -i | grep Arch &> /dev/null; then
 	plugins+=(archlinux)
 fi
 
-# Override "debian" plugin (ag is apt-get upgrade)
-type ag | grep alias &> /dev/null
-if [ "$?" -eq "0" ]; then
-	unalias ag
-fi
-
 # User configuration
 
 export PATH=$HOME/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+# Override "debian" plugin (ag is apt-get upgrade), must be after sourcing of
+# oh-my-zsh.
+type ag | grep alias &> /dev/null
+if [ "$?" -eq "0" ]; then
+	unalias ag
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
