@@ -45,15 +45,12 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker)
+plugins=(git docker command-not-found)
 if lsb_release -i | grep Ubuntu &> /dev/null; then
-	plugins+=(command-not-found debian)
+	plugins+=(debian)
 elif lsb_release -i | grep Arch &> /dev/null; then
 	plugins+=(archlinux)
 fi
-
-# Enable command-not-found
-source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # Override "debian" plugin (ag is apt-get upgrade)
 type ag | grep alias &> /dev/null
