@@ -116,7 +116,7 @@ function gdb-conf {
   conf=$1
   shift 1
 
-  $conf \
+  echo $conf \
     --disable-binutils \
     --disable-gold \
     --disable-ld \
@@ -127,5 +127,6 @@ function gdb-conf {
     CXXFLAGS="-g3 -O0" \
     CC="ccache gcc" \
     CXX="ccache g++" \
+    LDFLAGS="-fuse-ld=gold $LDFLAGS" \
     $*
 }
