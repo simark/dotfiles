@@ -45,7 +45,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker command-not-found)
+plugins=(git docker command-not-found zsh-syntax-highlighting)
 if lsb_release -i | grep Ubuntu &> /dev/null; then
 	plugins+=(debian)
 elif lsb_release -i | grep Arch &> /dev/null; then
