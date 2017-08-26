@@ -1,5 +1,8 @@
 - clean: ['~']
 - link:
+        ~/.config/terminator:
+          create: true
+          path: terminator
         ~/.vimrc: vimrc
         ~/.vim/bundle/Vundle.vim: Vundle.vim
         ~/.oh-my-zsh: oh-my-zsh

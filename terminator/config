@@ -1,0 +1,19 @@
+[global_config]
+  inactive_color_offset = 1.0
+[keybindings]
+  broadcast_all = None
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_image = None
+    foreground_color = "#ffffff"
+    palette = "#000000:#ff4848:#7cde20:#e6c536:#6d9cda:#ad83b4:#56cdcf:#d3d7cf:#555753:#ff9696:#adf964:#ffee66:#a8c5e3:#d5aad0:#9bdbdb:#eeeeec"
+    scrollback_infinite = True
