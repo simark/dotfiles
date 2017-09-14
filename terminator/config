@@ -1,5 +1,7 @@
 [global_config]
   inactive_color_offset = 1.0
+  title_receive_bg_color = "#c90700"
+  title_transmit_bg_color = "#6db3ff"
 [keybindings]
   broadcast_all = None
 [layouts]
@@ -13,7 +15,8 @@
 [plugins]
 [profiles]
   [[default]]
+    background_color = "#131926"
     background_image = None
-    foreground_color = "#ffffff"
+    foreground_color = "#d6d6d6"
     palette = "#000000:#ff4848:#7cde20:#e6c536:#6d9cda:#ad83b4:#56cdcf:#d3d7cf:#555753:#ff9696:#adf964:#ffee66:#a8c5e3:#d5aad0:#9bdbdb:#eeeeec"
     scrollback_infinite = True
