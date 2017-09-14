@@ -118,16 +118,20 @@ function gdb-conf {
   shift 1
 
   echo $conf \
-    --disable-binutils \
     --disable-gold \
     --disable-ld \
     --disable-gprof \
     --disable-gas \
     --enable-targets="all" \
-    CFLAGS="-g3 -O0" \
-    CXXFLAGS="-g3 -O0" \
-    CC="ccache gcc" \
-    CXX="ccache g++" \
-    LDFLAGS="-fuse-ld=gold $LDFLAGS" \
+    --with-python=python3 \
+    --with-guile \
+    --with-intel-pt \
+    --with-babeltrace \
+    --enable-sim \
+    CFLAGS="'-g3 -O0'" \
+    CXXFLAGS="'-g3 -O0'" \
+    CC="'ccache gcc'" \
+    CXX="'ccache g++'" \
+    LDFLAGS="'-fuse-ld=gold $LDFLAGS'" \
     $*
 }
