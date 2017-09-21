@@ -57,3 +57,6 @@ match ExtraWhitespace /\s\+$/
 " How to complete when pressing tab in "command" mode
 set wildmode=longest,list,full
 set wildmenu
+
+" Highlight stupid non break space
+au VimEnter,BufWinEnter * syn match ErrorMsg " "
