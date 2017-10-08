@@ -31,3 +31,6 @@ alias pkg-update='sudo etckeeper pre-install && sudo pacman -Syu && sudo etckeep
 alias readelf="readelf -W"
 
 alias gcf="git commit --fixup"
+
+# Pretty json
+alias json-pretty="python -m json.tool"
