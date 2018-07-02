@@ -133,6 +133,7 @@ function gdb-conf {
     CC="'ccache gcc'" \
     CXX="'ccache g++'" \
     LDFLAGS="'-fuse-ld=gold $LDFLAGS'" \
+    CPPFLAGS="-D_GLIBCXX_DEBUG=1" \
     $*
 }
 
