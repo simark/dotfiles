@@ -1,0 +1,12 @@
+#!/bin/bash
+
+make $*
+ret=$?
+
+if [ "$ret" -eq "0" ]; then
+	paplay /usr/share/sounds/freedesktop/stereo/complete.oga &
+else
+	paplay /usr/share/sounds/freedesktop/stereo/message.oga &
+fi
+
+exit $ret
