@@ -16,7 +16,9 @@
 [profiles]
   [[default]]
     background_color = "#131926"
-    background_image = None
+    cursor_color = "#d6d6d6"
+    font = Liberation Mono 10
     foreground_color = "#d6d6d6"
     palette = "#000000:#ff4848:#7cde20:#e6c536:#6d9cda:#ad83b4:#56cdcf:#d3d7cf:#555753:#ff9696:#adf964:#ffee66:#a8c5e3:#d5aad0:#9bdbdb:#eeeeec"
     scrollback_infinite = True
+    use_system_font = False
