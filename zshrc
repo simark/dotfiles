@@ -105,9 +105,6 @@ export DEBEMAIL='simon.marchi@polymtl.ca'
 export DEBFULLNAME='Simon Marchi'
 export DEB_BUILD_OPTIONS='nocheck'
 
-# Activate autojump
-. /usr/share/autojump/autojump.zsh
-
 function gdb-conf {
   if [ "$#" -lt 1 ]; then
 	  echo "Usage: gdb-conf configure-path [additional args...]"

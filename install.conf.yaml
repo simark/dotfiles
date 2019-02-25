@@ -1,21 +1,14 @@
 - clean: ['~']
 - link:
-        ~/.config/terminator:
-          create: true
-          path: terminator
         ~/.vimrc: vimrc
-        ~/.vim/bundle/Vundle.vim: Vundle.vim
         ~/.oh-my-zsh: oh-my-zsh
         ~/.zshrc: zshrc
         ~/.zshrc.aliases: zshrc.aliases
         ~/.oh-my-zsh/custom/crunch.zsh-theme: oh-my-zsh-custom/crunch.zsh-theme
+        ~/.config/xfce4/terminal/terminalrc: xfce4-terminalrc
 - shell:
-        #- ["dconf write /org/gnome/shell/overrides/attach-modal-dialogs false", "Disable attaching gnome modal dialogs"]
-        #- ["dconf write /org/gnome/shell/overrides/button-layout close,minimize,maximize:", "Show all window buttons"]
-        - ["mkdir -p ~/bin", "Creating ~/bin"]
-        - ["curl -o ~/bin/sss https://raw.githubusercontent.com/simark/sss/master/sss && chmod +x ~/bin/sss", "Installing sss"]
-        - ["curl -o ~/bin/tig-rebase.sh https://raw.githubusercontent.com/Nattfarinn/tig-rebase/master/tig-rebase.sh && chmod +x ~/bin/tig-rebase.sh", "Installing tig-rebase.sh"]
-        - ["curl -o ~/bin/mklog https://raw.githubusercontent.com/gcc-mirror/gcc/master/contrib/mklog && chmod +x ~/bin/mklog", "Installing mklog"]
-        - ["curl -o ~/bin/changelog-git-amend https://raw.githubusercontent.com/simark/gnu-changelog-tools/master/changelog-git-amend/changelog-git-amend.py && chmod +x ~/bin/changelog-git-amend", "Installing changelog-git-amend"]
-        - ["cp smake ~/bin/", "Installing smake"]
-        - ["vim +PluginInstall +qall", "Installing Vim plugins"]
+        - ["mkdir -p ~/.local/bin", "Creating ~/.local/bin"]
+        - ["curl -o ~/.local/bin/sss https://raw.githubusercontent.com/simark/sss/master/sss && chmod +x ~/.local/bin/sss", "Installing sss"]
+        - ["curl -o ~/.local/bin/mklog https://raw.githubusercontent.com/gcc-mirror/gcc/master/contrib/mklog && chmod +x ~/.local/bin/mklog", "Installing mklog"]
+        - ["curl -o ~/.local/bin/changelog-git-amend https://raw.githubusercontent.com/simark/gnu-changelog-tools/master/changelog-git-amend/changelog-git-amend.py && chmod +x ~/.local/bin/changelog-git-amend", "Installing changelog-git-amend"]
+        - ["cp smake ~/.local/bin/", "Installing smake"]

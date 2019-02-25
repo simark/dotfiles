@@ -2,18 +2,6 @@
 " needed is this file is used with vim -u).
 set nocompatible
 
-" Disable filetype temporarily (needed by Vundle), it is re-enabled later.
-filetype off
-
-" Vundle initialization
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'tpope/vim-fugitive'
-Plugin 'leafgarland/typescript-vim'
-
-call vundle#end()
-
 " Search settings
 set hlsearch " highlight
 set incsearch " incremental
@@ -27,17 +15,14 @@ set number
 set autoindent
 set noexpandtab
 set tabstop=8
-set softtabstop=8
+set softtabstop=2
+set shiftwidth=2
 
 " Enable mouse !
 set mouse=a
 
 " Saner backspace behavior
 set backspace=indent,eol,start
-
-" Enable completion
-filetype plugin indent on
-set omnifunc=syntaxcomplete#Complete
 
 " Enable syntax highlight
 syntax on
