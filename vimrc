@@ -2,6 +2,16 @@
 " needed is this file is used with vim -u).
 set nocompatible
 
+filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ycm-core/YouCompleteMe'
+call vundle#end()            " required
+
+filetype indent plugin on
+
 " Search settings
 set hlsearch " highlight
 set incsearch " incremental
@@ -45,3 +55,7 @@ set wildmenu
 
 " Highlight stupid non break space
 au VimEnter,BufWinEnter * syn match ErrorMsg " "
+
+" When doing "enter" while writing a C function call, align with open
+" parenthesis.
+set cino+=(0

@@ -34,3 +34,11 @@ alias gcf="git commit --fixup"
 
 # Pretty json
 alias json-pretty="python -m json.tool"
+
+alias yomadame="sudo"
+
+alias ltdebug="libtool --mode=execute gdb"
+alias ltgdb="libtool --mode=execute gdb"
+alias ltvalgrind="libtool --mode=execute valgrind"
+
+alias 🔨="make"
