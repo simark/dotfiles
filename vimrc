@@ -1,6 +1,20 @@
 " Disable vi compatibility mode (shouldn't be needed in a .vimrc, but would be
 " needed is this file is used with vim -u).
 set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'ycm-core/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 filetype off
 " set the runtime path to include Vundle and initialize
@@ -56,6 +70,35 @@ set wildmenu
 " Highlight stupid non break space
 au VimEnter,BufWinEnter * syn match ErrorMsg " "
 
+nmap <F3> :YcmCompleter GoToDefinition<CR>
+nmap <Leader>n :lnext<CR>
+
 " When doing "enter" while writing a C function call, align with open
 " parenthesis.
 set cino+=(0
+
+" Curly brace indented once compared to "if".
+set cino+={1s
+
+" Content indented twice comnpared to "if".
+set cino+=>2s,
+
+" ... except if there's no curly braces.
+set cino+=n-2
+
+" For functions.
+set cino+=^-2
+
+" Function return types at column 0.
+set cino+=t0
+
+" Line continuation.
+set cino+=+2
+
+" Continuation in unclosed parenthesis, in expressions.
+set cino+=(0
+set cino+=u0
+set cino+=w1
+set cino+=m1
+
+let g:ycm_always_populate_location_list = 1
